@@ -12,13 +12,14 @@ class GuessViewController: UIViewController {
 
     // MARK: - Outlets
     
+    @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var billboardTextField: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
     @IBOutlet weak var confettiImageView: UIImageView!
     @IBOutlet weak var guessButton: UIButton!
     @IBOutlet weak var lowerBoundTextField: UITextField!
     @IBOutlet weak var higherBoundTextField: UITextField!
-    
+    @IBOutlet weak var heartContainerStackView: UIStackView!
     
     // MARK: - Properties
 
