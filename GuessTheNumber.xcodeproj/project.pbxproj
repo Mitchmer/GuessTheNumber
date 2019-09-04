@@ -54,8 +54,6 @@
 			children = (
 				99FA9C0B2320304700917AD3 /* View Controllers */,
 				99FA9C0A2320302A00917AD3 /* Views */,
-				99FA9C092320302200917AD3 /* Model Controllers */,
-				99FA9C082320301D00917AD3 /* Models */,
 				99FA9C0723202FF200917AD3 /* Resources */,
 				99FA9BF923202EB800917AD3 /* Main.storyboard */,
 			);
@@ -71,20 +69,6 @@
 				99FA9C0123202EB900917AD3 /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		99FA9C082320301D00917AD3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		99FA9C092320302200917AD3 /* Model Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		99FA9C0A2320302A00917AD3 /* Views */ = {
