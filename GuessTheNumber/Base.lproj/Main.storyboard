@@ -25,23 +25,23 @@
                                     <constraint firstAttribute="height" constant="900" id="tuF-T6-BKa"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="C4Z-wS-IB2">
-                                <rect key="frame" x="41.5" y="94.5" width="331" height="717"/>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="C4Z-wS-IB2">
+                                <rect key="frame" x="41.5" y="318.5" width="331" height="269"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GUESS  THE  NUMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhB-Kq-UGv">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="367"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="126"/>
                                         <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-zT-rEw">
-                                        <rect key="frame" x="0.0" y="397" width="331" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="167.5" width="331" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lv-uP-0fg" userLabel="Guess Button">
-                                        <rect key="frame" x="0.0" y="514.5" width="331" height="202.5"/>
+                                        <rect key="frame" x="0.0" y="239" width="331" height="30"/>
                                         <color key="backgroundColor" red="0.47582972849999999" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Guess!"/>
                                         <connections>
@@ -58,7 +58,7 @@
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="centerY" secondItem="RTT-m9-tUC" secondAttribute="centerY" id="FjU-pg-pS2"/>
                             <constraint firstItem="JGq-vz-kKh" firstAttribute="centerX" secondItem="uyz-g4-fep" secondAttribute="centerX" id="LNe-aj-DPV"/>
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="width" secondItem="uyz-g4-fep" secondAttribute="width" multiplier="0.8" id="hok-kA-MFA"/>
-                            <constraint firstItem="C4Z-wS-IB2" firstAttribute="height" secondItem="uyz-g4-fep" secondAttribute="height" multiplier="0.8" id="j4P-Px-eel"/>
+                            <constraint firstItem="C4Z-wS-IB2" firstAttribute="height" secondItem="uyz-g4-fep" secondAttribute="height" multiplier="0.3" id="j4P-Px-eel"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RTT-m9-tUC"/>
                     </view>

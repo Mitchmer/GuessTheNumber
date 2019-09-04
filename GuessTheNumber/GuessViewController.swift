@@ -11,12 +11,10 @@ import UIKit
 class GuessViewController: UIViewController {
 
     // MARK: - Outlets
+    
     @IBOutlet weak var billboardTextField: UILabel!
-    
     @IBOutlet weak var guessTextField: UITextField!
-    
     @IBOutlet weak var confettiImageView: UIImageView!
-    
     @IBOutlet weak var guessButton: UIButton!
     
     
@@ -38,24 +36,21 @@ class GuessViewController: UIViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction func guessButtonTapped(_ sender: Any) {
-//        animateConfetti()
         guard let guess = guessTextField.text, let num = Int(guess) else { return }
         if !didWin {
             guessedNumberScreenInteration(from: num)
         } else {
             resetGame()
         }
-        
-        
     }
     
     // MARK: - Functions
-
     
     func guessedNumberScreenInteration(from guess: Int) {
-        
         if guess == numberToGuess {
+            animateConfetti()
             self.billboardTextField.text = "You got it"
             didWin.toggle()
             guessButton.setTitle("Reset?", for: .normal)
@@ -79,21 +74,7 @@ class GuessViewController: UIViewController {
     }
     
     func animateConfetti() {
-        
         self.confettiImageView.center.y -= self.view.bounds.height
-        
-        
         UIView.animate(withDuration: 8, delay: 0, options: [.repeat], animations: { self.confettiImageView.center.y += 3 * self.view.bounds.height}, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
