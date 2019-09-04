@@ -18,6 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confetti" translatesAutoresizingMaskIntoConstraints="NO" id="JGq-vz-kKh">
+                                <rect key="frame" x="-18" y="-902" width="450" height="900"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="pUv-HH-Fvi"/>
+                                    <constraint firstAttribute="height" constant="900" id="tuF-T6-BKa"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="C4Z-wS-IB2">
                                 <rect key="frame" x="41.5" y="94.5" width="331" height="717"/>
                                 <subviews>
@@ -43,13 +50,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confetti" translatesAutoresizingMaskIntoConstraints="NO" id="JGq-vz-kKh">
-                                <rect key="frame" x="-18" y="-902" width="450" height="900"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="450" id="pUv-HH-Fvi"/>
-                                    <constraint firstAttribute="height" constant="900" id="tuF-T6-BKa"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
