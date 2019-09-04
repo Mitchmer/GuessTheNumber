@@ -28,16 +28,19 @@ class GuessViewController: UIViewController {
     var positiveMessages: [String] = [
         "Too high, guess again", "Not low enough", "Aim lower", "You're doing well", "Don't give up, it's worth it in the end"
     ]
+    var topRange: Int = 100
+    var lowerRange: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        numberToGuess = Int.random(in: 1..<100)
+        generateNumber()
         
     }
     
     // MARK: - Actions
     
     @IBAction func guessButtonTapped(_ sender: Any) {
+        animateConfetti()
         guard let guess = guessTextField.text, let num = Int(guess) else { return }
         if !didWin {
             guessedNumberScreenInteration(from: num)
@@ -48,9 +51,13 @@ class GuessViewController: UIViewController {
     
     // MARK: - Functions
     
+    func generateNumber() {
+        numberToGuess = Int.random(in: lowerRange..<topRange)
+    }
+    
     func guessedNumberScreenInteration(from guess: Int) {
         if guess == numberToGuess {
-            animateConfetti()
+//            animateConfetti()
             self.billboardTextField.text = "You got it"
             didWin.toggle()
             guessButton.setTitle("Reset?", for: .normal)
