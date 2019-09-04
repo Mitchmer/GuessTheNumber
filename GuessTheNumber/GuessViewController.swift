@@ -24,17 +24,22 @@ class GuessViewController: UIViewController {
 
     var numberToGuess: Int = 0
     var didWin: Bool = false
-    
+    var negativeMessages: [String] = [
+        "Too low, guess again", "Not high enough", "Aim higher", "Don't give up, it's worth it in the end", "Maybe you should delete this app"
+    ]
+    var positiveMessages: [String] = [
+        "Too high, guess again", "Not low enough", "Aim lower", "You're doing well", "Don't give up, it's worth it in the end"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        numberToGuess = Int.random(in: 1..<5)
+        numberToGuess = Int.random(in: 1..<100)
         
     }
     
     // MARK: - Actions
     @IBAction func guessButtonTapped(_ sender: Any) {
-        animateConfetti()
+//        animateConfetti()
         guard let guess = guessTextField.text, let num = Int(guess) else { return }
         if !didWin {
             guessedNumberScreenInteration(from: num)
@@ -56,27 +61,29 @@ class GuessViewController: UIViewController {
             guessButton.setTitle("Reset?", for: .normal)
             
         } else if guess > numberToGuess {
-            self.billboardTextField.text = "A little high, try again"
+            let randomSubscript = Int.random(in: 0..<4)
+            self.billboardTextField.text = positiveMessages[randomSubscript]
         } else if guess < numberToGuess {
-            billboardTextField.text = "A little low, try again"
+            let randomSubscript = Int.random(in: 0..<4)
+            self.billboardTextField.text = negativeMessages[randomSubscript]
         }
     }
     
     func resetGame() {
         didWin.toggle()
         numberToGuess = Int.random(in: 1..<5)
-        guessButton.setTitle("Guess", for: .normal)
-        billboardTextField.text = "Guess \nThe \nNumber"
+        guessButton.setTitle("Guess!", for: .normal)
+        billboardTextField.text = "GUESS \nTHE \nNUMBER"
         guessTextField.text = ""
         
     }
     
     func animateConfetti() {
         
-        self.confettiImageView.center.y -= self.view.bounds.width
+        self.confettiImageView.center.y -= self.view.bounds.height
         
         
-        UIView.animate(withDuration: 8, delay: 0, options: [.repeat], animations: { self.confettiImageView.center.y += 4 * self.view.bounds.height}, completion: nil)
+        UIView.animate(withDuration: 8, delay: 0, options: [.repeat], animations: { self.confettiImageView.center.y += 3 * self.view.bounds.height}, completion: nil)
     }
     
     /*
