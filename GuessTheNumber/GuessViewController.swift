@@ -34,6 +34,7 @@ class GuessViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func guessButtonTapped(_ sender: Any) {
+        animateConfetti()
         guard let guess = guessTextField.text, let num = Int(guess) else { return }
         if !didWin {
             guessedNumberScreenInteration(from: num)
@@ -53,6 +54,7 @@ class GuessViewController: UIViewController {
             self.billboardTextField.text = "You got it"
             didWin.toggle()
             guessButton.setTitle("Reset?", for: .normal)
+            
         } else if guess > numberToGuess {
             self.billboardTextField.text = "A little high, try again"
         } else if guess < numberToGuess {
@@ -66,6 +68,7 @@ class GuessViewController: UIViewController {
         guessButton.setTitle("Guess", for: .normal)
         billboardTextField.text = "Guess \nThe \nNumber"
         guessTextField.text = ""
+        
     }
     
     func animateConfetti() {
