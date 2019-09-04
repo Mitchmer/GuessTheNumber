@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YiU-mX-hUs">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,17 +43,28 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confetti" translatesAutoresizingMaskIntoConstraints="NO" id="JGq-vz-kKh">
+                                <rect key="frame" x="-18" y="-902" width="450" height="900"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="pUv-HH-Fvi"/>
+                                    <constraint firstAttribute="height" constant="900" id="tuF-T6-BKa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JGq-vz-kKh" firstAttribute="centerY" secondItem="uyz-g4-fep" secondAttribute="centerY" constant="-900" id="6kH-qX-Wjc"/>
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="centerX" secondItem="RTT-m9-tUC" secondAttribute="centerX" id="7zM-sk-e29"/>
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="centerY" secondItem="RTT-m9-tUC" secondAttribute="centerY" id="FjU-pg-pS2"/>
+                            <constraint firstItem="JGq-vz-kKh" firstAttribute="centerX" secondItem="uyz-g4-fep" secondAttribute="centerX" id="LNe-aj-DPV"/>
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="width" secondItem="uyz-g4-fep" secondAttribute="width" multiplier="0.8" id="hok-kA-MFA"/>
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="height" secondItem="uyz-g4-fep" secondAttribute="height" multiplier="0.8" id="j4P-Px-eel"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RTT-m9-tUC"/>
                     </view>
                     <connections>
+                        <outlet property="billboardTextField" destination="QhB-Kq-UGv" id="V1q-2M-cnD"/>
+                        <outlet property="confettiImageView" destination="JGq-vz-kKh" id="RmM-aV-qOg"/>
                         <outlet property="guessTextField" destination="kEO-zT-rEw" id="0L9-Un-VXQ"/>
                     </connections>
                 </viewController>
@@ -62,4 +73,7 @@
             <point key="canvasLocation" x="-11.594202898550726" y="125.89285714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="confetti" width="900" height="480"/>
+    </resources>
 </document>
