@@ -33,7 +33,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lv-uP-0fg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lv-uP-0fg" userLabel="Guess Button">
                                         <rect key="frame" x="0.0" y="514.5" width="331" height="202.5"/>
                                         <color key="backgroundColor" red="0.47582972849999999" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Guess!"/>
@@ -65,6 +65,7 @@
                     <connections>
                         <outlet property="billboardTextField" destination="QhB-Kq-UGv" id="V1q-2M-cnD"/>
                         <outlet property="confettiImageView" destination="JGq-vz-kKh" id="RmM-aV-qOg"/>
+                        <outlet property="guessButton" destination="6Lv-uP-0fg" id="c8D-A4-60Y"/>
                         <outlet property="guessTextField" destination="kEO-zT-rEw" id="0L9-Un-VXQ"/>
                     </connections>
                 </viewController>

@@ -17,10 +17,13 @@ class GuessViewController: UIViewController {
     
     @IBOutlet weak var confettiImageView: UIImageView!
     
+    @IBOutlet weak var guessButton: UIButton!
+    
+    
     // MARK: - Properties
 
     var numberToGuess: Int = 0
-   
+    var didWin: Bool = false
     
     
     override func viewDidLoad() {
@@ -31,42 +34,38 @@ class GuessViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func guessButtonTapped(_ sender: Any) {
-        
         guard let guess = guessTextField.text, let num = Int(guess) else { return }
-        
-        compareNumbers(num: num) { (num) in
+        if !didWin {
             guessedNumberScreenInteration(from: num)
+        } else {
+            resetGame()
         }
+        
         
     }
     
     // MARK: - Functions
-    
-    func compareNumbers(num: Int, completion: (Int) -> Void) {
-        if num > numberToGuess {
-            
-            let distanceFromGuessedNumber = num - numberToGuess
-            print("guess number: \(num) random number: \(numberToGuess) distance \(distanceFromGuessedNumber)")
-            completion(distanceFromGuessedNumber)
-            return
-            
-        } else {
-            
-            let distanceFromGuessedNumber =  numberToGuess - num
-            print("guess number: \(num) random number: \(numberToGuess) distance \(distanceFromGuessedNumber)")
-            return
-        }
-    }
+
     
     func guessedNumberScreenInteration(from guess: Int) {
         
         if guess == numberToGuess {
             self.billboardTextField.text = "You got it"
+            didWin.toggle()
+            guessButton.setTitle("Reset?", for: .normal)
         } else if guess > numberToGuess {
             self.billboardTextField.text = "A little high, try again"
         } else if guess < numberToGuess {
-            self.billboardTextField.text = "A little low, try again"
+            billboardTextField.text = "A little low, try again"
         }
+    }
+    
+    func resetGame() {
+        didWin.toggle()
+        numberToGuess = Int.random(in: 1..<5)
+        guessButton.setTitle("Guess", for: .normal)
+        billboardTextField.text = "Guess \nThe \nNumber"
+        guessTextField.text = ""
     }
     
     func animateConfetti() {
