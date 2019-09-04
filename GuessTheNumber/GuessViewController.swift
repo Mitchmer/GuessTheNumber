@@ -16,6 +16,8 @@ class GuessViewController: UIViewController {
     @IBOutlet weak var guessTextField: UITextField!
     @IBOutlet weak var confettiImageView: UIImageView!
     @IBOutlet weak var guessButton: UIButton!
+    @IBOutlet weak var lowerBoundTextField: UITextField!
+    @IBOutlet weak var higherBoundTextField: UITextField!
     
     
     // MARK: - Properties
@@ -47,6 +49,13 @@ class GuessViewController: UIViewController {
         } else {
             resetGame()
         }
+    }
+    @IBAction func setButtonTapped(_ sender: Any) {
+        guard let lowRange = lowerBoundTextField.text, let highRange = higherBoundTextField.text else { return }
+        lowerRange = Int(lowRange) ?? 0
+        topRange = Int(highRange) ?? 100
+        generateNumber()
+        print("\(lowerRange) to \(topRange)")
     }
     
     // MARK: - Functions

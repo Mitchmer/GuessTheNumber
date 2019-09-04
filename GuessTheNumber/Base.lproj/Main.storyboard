@@ -61,6 +61,9 @@
                                         <rect key="frame" x="0.0" y="190" width="331" height="30"/>
                                         <color key="backgroundColor" red="0.059212799810000001" green="1" blue="0.62852577870000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Set"/>
+                                        <connections>
+                                            <action selector="setButtonTapped:" destination="YiU-mX-hUs" eventType="touchUpInside" id="5ur-hZ-Fvz"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's your guess?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-zT-rEw">
                                         <rect key="frame" x="0.0" y="237" width="331" height="30"/>
@@ -95,6 +98,8 @@
                         <outlet property="confettiImageView" destination="JGq-vz-kKh" id="RmM-aV-qOg"/>
                         <outlet property="guessButton" destination="6Lv-uP-0fg" id="c8D-A4-60Y"/>
                         <outlet property="guessTextField" destination="kEO-zT-rEw" id="0L9-Un-VXQ"/>
+                        <outlet property="higherBoundTextField" destination="avS-yT-Td3" id="w85-2r-ubH"/>
+                        <outlet property="lowerBoundTextField" destination="GEB-dc-asd" id="32v-TL-QML"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tY-Kv-9JM" userLabel="First Responder" sceneMemberID="firstResponder"/>
