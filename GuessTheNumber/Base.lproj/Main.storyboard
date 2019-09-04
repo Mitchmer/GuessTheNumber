@@ -25,8 +25,8 @@
                                     <constraint firstAttribute="height" constant="900" id="tuF-T6-BKa"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="C4Z-wS-IB2">
-                                <rect key="frame" x="41.5" y="318.5" width="331" height="269"/>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C4Z-wS-IB2">
+                                <rect key="frame" x="41.5" y="296" width="331" height="314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GUESS  THE  NUMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhB-Kq-UGv">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="126"/>
@@ -34,14 +34,42 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-zT-rEw">
-                                        <rect key="frame" x="0.0" y="167.5" width="331" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="35K-Dd-BZX">
+                                        <rect key="frame" x="0.0" y="143" width="331" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEB-dc-asd">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-nI-3B8">
+                                                <rect key="frame" x="113" y="0.0" width="105" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avS-yT-Td3">
+                                                <rect key="frame" x="226" y="0.0" width="105" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVg-MQ-f7S">
+                                        <rect key="frame" x="0.0" y="190" width="331" height="30"/>
+                                        <color key="backgroundColor" red="0.059212799810000001" green="1" blue="0.62852577870000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Set"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's your guess?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-zT-rEw">
+                                        <rect key="frame" x="0.0" y="237" width="331" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lv-uP-0fg" userLabel="Guess Button">
-                                        <rect key="frame" x="0.0" y="239" width="331" height="30"/>
+                                        <rect key="frame" x="0.0" y="284" width="331" height="30"/>
                                         <color key="backgroundColor" red="0.47582972849999999" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Guess!"/>
                                         <connections>
@@ -51,14 +79,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.84458088260297814" green="0.90868194917741252" blue="0.95523184537887573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="JGq-vz-kKh" firstAttribute="centerY" secondItem="uyz-g4-fep" secondAttribute="centerY" constant="-900" id="6kH-qX-Wjc"/>
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="centerX" secondItem="RTT-m9-tUC" secondAttribute="centerX" id="7zM-sk-e29"/>
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="centerY" secondItem="RTT-m9-tUC" secondAttribute="centerY" id="FjU-pg-pS2"/>
                             <constraint firstItem="JGq-vz-kKh" firstAttribute="centerX" secondItem="uyz-g4-fep" secondAttribute="centerX" id="LNe-aj-DPV"/>
                             <constraint firstItem="C4Z-wS-IB2" firstAttribute="width" secondItem="uyz-g4-fep" secondAttribute="width" multiplier="0.8" id="hok-kA-MFA"/>
-                            <constraint firstItem="C4Z-wS-IB2" firstAttribute="height" secondItem="uyz-g4-fep" secondAttribute="height" multiplier="0.3" id="j4P-Px-eel"/>
+                            <constraint firstItem="C4Z-wS-IB2" firstAttribute="height" secondItem="uyz-g4-fep" secondAttribute="height" multiplier="0.35" id="j4P-Px-eel"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RTT-m9-tUC"/>
                     </view>
