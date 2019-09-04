@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Guess View Controller-->
         <scene sceneID="bXF-IA-lLW">
             <objects>
-                <viewController id="YiU-mX-hUs" sceneMemberID="viewController">
+                <viewController id="YiU-mX-hUs" customClass="GuessViewController" customModule="GuessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uyz-g4-fep">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,9 @@
                                         <rect key="frame" x="0.0" y="514.5" width="331" height="202.5"/>
                                         <color key="backgroundColor" red="0.47582972849999999" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Guess!"/>
+                                        <connections>
+                                            <action selector="guessButtonTapped:" destination="YiU-mX-hUs" eventType="touchUpInside" id="tjO-Dd-dHy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -50,6 +53,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RTT-m9-tUC"/>
                     </view>
+                    <connections>
+                        <outlet property="guessTextField" destination="kEO-zT-rEw" id="0L9-Un-VXQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tY-Kv-9JM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

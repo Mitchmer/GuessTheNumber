@@ -10,16 +10,23 @@ import UIKit
 
 class GuessViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var guessTextField: UITextField!
+    
+    // MARK: - Properties
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
     }
     
-
-    var number = Int.random(in: 0...5)
+    // MARK: - Actions
+    @IBAction func guessButtonTapped(_ sender: Any) {
+    }
     
-    
+    // MARK: - Functions
     
     /*
     // MARK: - Navigation
