@@ -67,9 +67,15 @@ class GuessViewController: UIViewController {
         guard let lowRange = lowerBoundTextField.text, let highRange = higherBoundTextField.text else { return }
         lowerRange = Int(lowRange) ?? 0
         topRange = Int(highRange) ?? 100
-        resetHearts()
-        generateNumber()
-        print("\(lowerRange) to \(topRange)")
+        if lowerRange == topRange {
+            equalRangesAlert()
+        } else if topRange < lowerRange {
+            illogicalRangeAlert()
+        } else {
+            resetHearts()
+            generateNumber()
+            print("\(lowerRange) to \(topRange)")
+        }
     }
     
     // MARK: - Functions
@@ -92,6 +98,23 @@ class GuessViewController: UIViewController {
             let randomSubscript = Int.random(in: 0..<4)
             self.billboardTextField.text = negativeMessages[randomSubscript]
         }
+    }
+    
+    func equalRangesAlert() {
+        
+        let alert = UIAlertController(title: "Ranges can't be equal", message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive))
+        present(alert, animated: true)
+        
+    }
+    
+    func illogicalRangeAlert() {
+        
+        let alert = UIAlertController(title: "Top range must be higher", message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive))
+        present(alert, animated: true)
     }
     
     func resetGame() {
