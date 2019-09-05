@@ -12,6 +12,11 @@ class GuessViewController: UIViewController {
 
     // MARK: - Outlets
     
+    @IBOutlet weak var heart5ImageView: UIImageView!
+    @IBOutlet weak var heart4ImageView: UIImageView!
+    @IBOutlet weak var heart3ImageView: UIImageView!
+    @IBOutlet weak var heart2ImageView: UIImageView!
+    @IBOutlet weak var heart1ImageView: UIImageView!
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var billboardTextField: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
@@ -23,6 +28,7 @@ class GuessViewController: UIViewController {
     
     // MARK: - Properties
 
+    var lives: Int = 5
     var numberToGuess: Int = 0
     var didWin: Bool = false
     var negativeMessages: [String] = [
@@ -47,6 +53,7 @@ class GuessViewController: UIViewController {
         guard let guess = guessTextField.text, let num = Int(guess) else { return }
         if !didWin {
             guessedNumberScreenInteration(from: num)
+            updateHearts()
         } else {
             resetGame()
         }
@@ -93,5 +100,24 @@ class GuessViewController: UIViewController {
     func animateConfetti() {
         self.confettiImageView.center.y -= self.view.bounds.height
         UIView.animate(withDuration: 8, delay: 0, options: [.repeat], animations: { self.confettiImageView.center.y += 3 * self.view.bounds.height}, completion: nil)
+    }
+    
+    func updateHearts() {
+        lives -= 1
+        
+        switch lives {
+        case 4:
+            heart5ImageView.image = UIImage(named: "deadheart")
+        case 3:
+            heart4ImageView.image = UIImage(named: "deadheart")
+        case 2:
+            heart3ImageView.image = UIImage(named: "deadheart")
+        case 1:
+            heart2ImageView.image = UIImage(named: "deadheart")
+        case 0:
+            heart1ImageView.image = UIImage(named: "deadheart")
+        default:
+            return
+        }
     }
 }

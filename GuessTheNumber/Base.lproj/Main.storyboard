@@ -136,6 +136,11 @@
                         <outlet property="confettiImageView" destination="JGq-vz-kKh" id="RmM-aV-qOg"/>
                         <outlet property="guessButton" destination="6Lv-uP-0fg" id="c8D-A4-60Y"/>
                         <outlet property="guessTextField" destination="kEO-zT-rEw" id="0L9-Un-VXQ"/>
+                        <outlet property="heart1ImageView" destination="c3U-QQ-aqr" id="nh3-dn-xR2"/>
+                        <outlet property="heart2ImageView" destination="k3S-kp-vUw" id="HDF-bx-auf"/>
+                        <outlet property="heart3ImageView" destination="Qha-69-A4D" id="3Bj-k1-DBi"/>
+                        <outlet property="heart4ImageView" destination="5ad-6h-Khp" id="bbf-Os-Rn7"/>
+                        <outlet property="heart5ImageView" destination="LeW-fX-MdW" id="v2K-Xx-HzY"/>
                         <outlet property="heartContainerStackView" destination="nKv-8j-uIJ" id="QJw-XI-H7Z"/>
                         <outlet property="higherBoundTextField" destination="avS-yT-Td3" id="w85-2r-ubH"/>
                         <outlet property="lowerBoundTextField" destination="GEB-dc-asd" id="32v-TL-QML"/>
