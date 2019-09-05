@@ -49,11 +49,16 @@ class GuessViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func guessButtonTapped(_ sender: Any) {
-        animateConfetti()
+//        animateConfetti()
         guard let guess = guessTextField.text, let num = Int(guess) else { return }
         if !didWin {
             guessedNumberScreenInteration(from: num)
             updateHearts()
+            if lives == 0 {
+                billboardTextField.text = "YOU LOST"
+                guessButton.setTitle("Reset?", for: .normal)
+                didWin.toggle()
+            }
         } else {
             resetGame()
         }
@@ -62,6 +67,7 @@ class GuessViewController: UIViewController {
         guard let lowRange = lowerBoundTextField.text, let highRange = higherBoundTextField.text else { return }
         lowerRange = Int(lowRange) ?? 0
         topRange = Int(highRange) ?? 100
+        resetHearts()
         generateNumber()
         print("\(lowerRange) to \(topRange)")
     }
@@ -94,7 +100,16 @@ class GuessViewController: UIViewController {
         guessButton.setTitle("Guess!", for: .normal)
         billboardTextField.text = "GUESS \nTHE \nNUMBER"
         guessTextField.text = ""
-        
+        resetHearts()
+    }
+    
+    func resetHearts() {
+        lives = 5
+        heart1ImageView.image = UIImage(named: "liveheart")
+        heart2ImageView.image = UIImage(named: "liveheart")
+        heart3ImageView.image = UIImage(named: "liveheart")
+        heart4ImageView.image = UIImage(named: "liveheart")
+        heart5ImageView.image = UIImage(named: "liveheart")
     }
     
     func animateConfetti() {
