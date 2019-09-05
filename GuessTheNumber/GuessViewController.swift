@@ -32,10 +32,10 @@ class GuessViewController: UIViewController {
     var numberToGuess: Int = 0
     var didWin: Bool = false
     var negativeMessages: [String] = [
-        "Too low, guess again", "Not high enough", "Aim higher", "Don't give up, it's worth it in the end", "Maybe you should delete this app"
+        "TOO LOW, GUESS AGAIN", "NOT HIGH ENOUGH", "AIM HIGHER", "DON'T GIVE UP, IT'S ABOVE"
     ]
     var positiveMessages: [String] = [
-        "Too high, guess again", "Not low enough", "Aim lower", "You're doing well", "Don't give up, it's worth it in the end"
+        "TOO HIGH, GUESS AGAIN", "NOT LOW ENOUGH", "AIM LOWER", "DON'T GIVE UP, IT'S BELOW"
     ]
     var topRange: Int = 100
     var lowerRange: Int = 0
@@ -50,12 +50,12 @@ class GuessViewController: UIViewController {
     
     @IBAction func guessButtonTapped(_ sender: Any) {
 //        animateConfetti()
-        guard let guess = guessTextField.text, let num = Int(guess) else { return }
         if !didWin {
+            guard let guess = guessTextField.text, let num = Int(guess) else { return }
             guessedNumberScreenInteration(from: num)
             updateHearts()
-            if lives == 0 {
-                billboardTextField.text = "YOU LOST"
+            if lives == 0 && !didWin {
+                billboardTextField.text = "💩 YOU LOST 💩"
                 guessButton.setTitle("Reset?", for: .normal)
                 didWin.toggle()
             }
@@ -81,7 +81,7 @@ class GuessViewController: UIViewController {
     func guessedNumberScreenInteration(from guess: Int) {
         if guess == numberToGuess {
 //            animateConfetti()
-            self.billboardTextField.text = "You got it"
+            self.billboardTextField.text = "⭐️ YOU GOT IT ⭐️"
             didWin.toggle()
             guessButton.setTitle("Reset?", for: .normal)
             
