@@ -53,7 +53,6 @@ class GuessViewController: UIViewController {
         if !didWin {
             guard let guess = guessTextField.text, let num = Int(guess) else { return }
             guessedNumberScreenInteration(from: num)
-            updateHearts()
             if lives == 0 && !didWin {
                 billboardTextField.text = "💩 YOU LOST 💩"
                 guessButton.setTitle("Reset?", for: .normal)
@@ -94,9 +93,11 @@ class GuessViewController: UIViewController {
         } else if guess > numberToGuess {
             let randomSubscript = Int.random(in: 0..<4)
             self.billboardTextField.text = positiveMessages[randomSubscript]
+            updateHearts()
         } else if guess < numberToGuess {
             let randomSubscript = Int.random(in: 0..<4)
             self.billboardTextField.text = negativeMessages[randomSubscript]
+            updateHearts()
         }
     }
     
