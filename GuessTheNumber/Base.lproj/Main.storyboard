@@ -82,31 +82,31 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKv-8j-uIJ">
                                         <rect key="frame" x="0.0" y="296" width="331" height="152"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c3U-QQ-aqr">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveheart" translatesAutoresizingMaskIntoConstraints="NO" id="c3U-QQ-aqr">
                                                 <rect key="frame" x="0.0" y="43" width="66" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="c3U-QQ-aqr" secondAttribute="height" multiplier="1:1" id="oJO-vB-pF4"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k3S-kp-vUw">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveheart" translatesAutoresizingMaskIntoConstraints="NO" id="k3S-kp-vUw">
                                                 <rect key="frame" x="66" y="43" width="66.5" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="k3S-kp-vUw" secondAttribute="height" multiplier="1:1" id="Ka1-CM-8Sc"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qha-69-A4D">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveheart" translatesAutoresizingMaskIntoConstraints="NO" id="Qha-69-A4D">
                                                 <rect key="frame" x="132.5" y="43" width="66" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Qha-69-A4D" secondAttribute="height" multiplier="1:1" id="FAr-qu-ldd"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ad-6h-Khp">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveheart" translatesAutoresizingMaskIntoConstraints="NO" id="5ad-6h-Khp">
                                                 <rect key="frame" x="198.5" y="43" width="66.5" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="5ad-6h-Khp" secondAttribute="height" multiplier="1:1" id="sAn-A3-rp2"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LeW-fX-MdW">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveheart" translatesAutoresizingMaskIntoConstraints="NO" id="LeW-fX-MdW">
                                                 <rect key="frame" x="265" y="43" width="66" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LeW-fX-MdW" secondAttribute="height" multiplier="1:1" id="2te-Yu-aU0"/>
@@ -149,5 +149,6 @@
     </scenes>
     <resources>
         <image name="confetti" width="900" height="480"/>
+        <image name="liveheart" width="254" height="254"/>
     </resources>
 </document>
